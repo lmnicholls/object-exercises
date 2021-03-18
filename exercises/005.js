@@ -25,6 +25,8 @@ Starter Code :
 */
 
 function transformEmployeeData(array) {
-  // your code here
-
-}
+    const output = array.map(
+        employee => Object.fromEntries(employee)
+    );
+	return output;
+  }

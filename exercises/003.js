@@ -21,5 +21,12 @@ Starter Code:
 
 function fromListToObject(array) {
   // your code here
-
+  let object = {};
+  for (var item in array) {
+    let key = array[item][0];
+    let value = array[item][1];
+    object[key] = value;
+  }
+  return object;
 }
+
