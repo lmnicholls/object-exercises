@@ -18,15 +18,31 @@ For instance, if the input had 6 values instead of 4, your code should flexibly 
 
 Starter Code:
 */
+// MY SOLUTION
+// function fromListToObject(array) {
+ 
+//   let object = {};
+//   for (var item in array) {
+//     let key = array[item][0];
+//     let value = array[item][1];
+//     object[key] = value;
+//   }
+//   return object;
+// }
 
+// EXAMPLE SOLUTION
 function fromListToObject(array) {
-  // your code here
-  let object = {};
-  for (var item in array) {
-    let key = array[item][0];
-    let value = array[item][1];
-    object[key] = value;
-  }
-  return object;
-}
+ 
+  var returnObj = {};
 
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+
+    var key = element[0];
+    var value = element[1];
+
+    returnObj[key] = value;
+  }
+
+  return returnObj;
+}

@@ -22,13 +22,24 @@ function transformFirstAndLast(array) {
 }
 */
 
-function transformFirstAndLast(array) {
-  //your code here
-  let key = array[0];
-  let value = array[array.length - 1];
-  var object = {};
 
-  object[key] = value;
+// My Solution
+// function transformFirstAndLast(array) {
+//   //your code here
+//   let key = array[0];
+//   let value = array[array.length - 1];
+//   var object = {};
+
+//   object[key] = value;
   
-  return object;
+//   return object;
+// }
+
+// Example Solution
+function transformFirstAndLast(array) {
+  var returnObj = {};
+
+  returnObj[array[0]] = array[array.length - 1];
+
+  return returnObj;
 }

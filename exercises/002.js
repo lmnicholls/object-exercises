@@ -25,11 +25,23 @@ function getAllKeys(obj) {
 }
 */
 
-function getAllKeys(obj){
-  // your code here
-  let array = [];
-  for(var key in obj) {
-    array.push(key)
+// MY SOLUTION
+// function getAllKeys(obj){
+//   // your code here
+//   let array = [];
+//   for(var key in obj) {
+//     array.push(key)
+//   }
+//   return array;
+// }
+
+// EXAMPLE SOLUTION
+function getAllKeys(obj) {
+  var returnArr = [];
+
+  for (prop in obj) {
+    returnArr.push(prop);
   }
-  return array;
+
+  return returnArr;
 }

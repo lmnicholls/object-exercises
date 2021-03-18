@@ -21,10 +21,27 @@ E.g., it should also be able to handle this, or any other object containing simp
 Starter Code:
 */
 
-function convertObjectToList(obj) {
-  let arr = [];
-	for (const element of Object.entries(obj)) {
-  		arr.push(element);
-	}
-  return arr;
+// MY SOLUTION 
+// function convertObjectToList(obj) {
+//   let arr = [];
+// 	for (const element of Object.entries(obj)) {
+//   		arr.push(element);
+// 	}
+//   return arr;
+//  };
+
+ // EXAMPLE SOLUTION
+  function convertObjectToList(obj) {
+    var returnArr = [];
+
+    for (prop in obj) {
+      var keyValueArr = [];
+      
+      keyValueArr.push(prop);
+      keyValueArr.push(obj[prop]);
+      
+      returnArr.push(keyValueArr);
+    }
+
+    return returnArr;
  };

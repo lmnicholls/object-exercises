@@ -27,11 +27,23 @@ Function's return value (output):
 Starter Code
 */
 
-function listAllValues(obj) {
-  let array = [];
-  for(var key in obj) {
-    array.push(obj[key])
-  }
-  return array;
+// MY SOLUTION
+// function listAllValues(obj) {
+//   let array = [];
+//   for(var key in obj) {
+//     array.push(obj[key])
+//   }
+//   return array;
 
+// }
+
+// EXAMPLE SOLUTION
+function listAllValues(obj) {
+  var returnArr = [];
+
+  for (prop in obj) {
+    returnArr.push(obj[prop])
+  };
+
+  return returnArr;
 }

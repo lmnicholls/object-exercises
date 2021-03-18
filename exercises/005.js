@@ -24,9 +24,31 @@ For example, let's say the HR department adds a "tshirtSize" field to each emplo
 Starter Code :
 */
 
+// MY SOLUTION
+// function transformEmployeeData(array) {
+//     const output = array.map(
+//         employee => Object.fromEntries(employee)
+//     );
+// 	return output;
+// }
+
+// EXAMPLE SOLUTION
 function transformEmployeeData(array) {
-    const output = array.map(
-        employee => Object.fromEntries(employee)
-    );
-	return output;
-  }
+    var returnArr = [];
+
+    for (let i = 0; i < array.length; i++) {
+        var employeeArr = array[i];
+        var employeeObj = {};
+
+        for (let j = 0; j < employeeArr.length; j++) {
+            var keyValueArr = employeeArr[j];
+            var employeeKey = keyValueArr[0];
+            var employeeValue = keyValueArr[1];
+
+            employeeObj[employeeKey] = employeeValue;  
+        }
+        returnArr.push(employeeObj);
+    }
+    
+    return returnArr;
+}
